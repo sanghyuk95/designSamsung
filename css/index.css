@@ -12,7 +12,6 @@ li {
 }
 a {
   text-decoration: none;
-  color: #333;
 }
 img {
   border: 0;
@@ -35,10 +34,172 @@ a {
   word-break: keep-all;
 }
 body {
-  color: #222;
-  font-size: 16px;
-  line-height: 1;
-  letter-spacing: 0;
-  word-break: keep-all;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #f9fafb;
+  /* height: auto; */
+  height: 2000px;
+  min-height: 100%;
+  width: 100%;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+  transition: all 0.1s ease 0s;
+  transform: translateY(0px);
+  width: 100%;
+  height: 120px;
+  color: rgb(255, 255, 255);
+  backdrop-filter: blur(5px);
+}
+.header.active {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-28px);
+}
+.header-view {
+  display: block;
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.header-sub {
+  padding: 8px 24px 8px 24px;
+  width: 100%;
+}
+.header-sub-menu {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.025rem;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.header-sub-menu-list {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.header-sub-menu-list a {
+  color: #999999;
+}
+.header-sub-menu-list:hover a {
+  color: #f9bb00;
+}
+
+.header-main {
+  position: relative;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-main-left {
+  position: absolute;
+}
+.header-main-left a {
+  max-width: 113px;
+  cursor: pointer;
+  max-height: 20px;
+  overflow: hidden;
+  display: flex;
+  overflow: visible;
+  align-items: center;
+}
+.header-main-left img {
+  width: 100%;
+}
+.header-main-center {
+  margin: 0 auto;
+}
+.gnb {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333333;
+  display: flex;
+  flex-direction: row;
+  gap: 88px;
+  height: 90px;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.gnb > li > a {
+  color: #333333;
+  transition: all 0.2s;
+}
+.gnb > li:hover > a {
+  color: #f9bb00;
+}
+.lnbwrap {
+  display: none;
+  height: 0;
+  transition: height 0.5s;
+}
+.gnb:hover .lnbwrap {
+  display: block;
+  backdrop-filter: blur(5px);
+  transition: 0.2s;
+  opacity: 1;
+  width: 100vw;
+  transform: scale(97%);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999999;
+  position: absolute;
+  background: #4e5059dd;
+  height: 228px;
+  top: 90px;
+}
+.lnb {
+  cursor: default;
+  transition: 0.3s;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  height: 164px;
+  z-index: 99999999;
+  top: 112px;
+}
+.lnb li {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.025rem;
+  font-weight: 400;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lnb a {
+  color: #ebebeb;
+  transition: all 0.2s;
+}
+.lnb > li:hover > a {
+  color: #f9bb00;
+}
+.gnb:hover .lnb {
+  opacity: 1;
+  max-height: 164px;
+  overflow: visible;
+  bottom: -188px;
 }
