@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>홈 - 이마트24</title>
   </head>
   <body>
@@ -88,29 +99,63 @@
       </header>
       <!-- 헤더 끝-->
       <!-- 메인배너 -->
-      <section class="mainbanner"></section>
+      <section class="mainbanner">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#"><img src="img/1.png" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="img/2.png" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="img/3.png" alt="" /></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="img/4.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 메인배너 끝-->
-      <!-- 행사상품 -->
-      <section class="event"></section>
-      <!-- 행사상품 끝 -->
-      <!-- 카드배너 -->
-      <section class="card"></section>
-      <!-- 카드배너 끝 -->
-      <!-- 창업 -->
-      <section class="create"></section>
-      <!-- 창업 끝 -->
-      <!-- 매장찾기 -->
-      <section class="find"></section>
-      <!-- 매장찾기 끝 -->
-      <!-- 편의점 -->
-      <section class="fun"></section>
-      <!-- 편의점 끝-->
-      <!-- 스토리 -->
-      <section class="story"></section>
-      <!-- 스토리 끝-->
-      <!-- 뉴스 -->
-      <section class="news"></section>
-      <!-- 뉴스 끝 -->
+      <div class="main-view">
+        <div class="swiper-control">
+          <div class="controler">
+            <ul class="controler-btn">
+              <li><i class="play fa-solid fa-pause"></i></li>
+              <li><i class="fa-solid fa-arrow-left"></i></li>
+              <li><i class="fa-solid fa-arrow-right"></i></li>
+            </ul>
+            <div class="index">
+              <h2 class="index-left">1</h2>
+              <div class="index-center"></div>
+              <h2 class="index-right">4</h2>
+            </div>
+          </div>
+        </div>
+        <!-- 행사상품 -->
+        <section class="event"></section>
+        <!-- 행사상품 끝 -->
+        <!-- 카드배너 -->
+        <section class="card"></section>
+        <!-- 카드배너 끝 -->
+        <!-- 창업 -->
+        <section class="create"></section>
+        <!-- 창업 끝 -->
+        <!-- 매장찾기 -->
+        <section class="find"></section>
+        <!-- 매장찾기 끝 -->
+        <!-- 편의점 -->
+        <section class="fun"></section>
+        <!-- 편의점 끝-->
+        <!-- 스토리 -->
+        <section class="story"></section>
+        <!-- 스토리 끝-->
+        <!-- 뉴스 -->
+        <section class="news"></section>
+        <!-- 뉴스 끝 -->
+      </div>
+
       <!-- 푸터 -->
       <footer class="footer"></footer>
       <!-- 푸터 끝 -->
@@ -124,5 +169,6 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/index.js"></script>
 </html>
