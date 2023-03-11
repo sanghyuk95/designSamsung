@@ -13,7 +13,7 @@ window.onload = function () {
     offset: "-10%",
   });
 
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".mainSwiper", {
     autoplay: {
       delay: 2000,
     },
@@ -43,5 +43,34 @@ window.onload = function () {
     } else {
       swiper.autoplay.resume();
     }
+  });
+
+  const $list = document.querySelectorAll(".categories-list");
+
+  $list.forEach((item, idx) => {
+    item.addEventListener("click", () => {
+      $list.forEach((e, i) => {
+        e.classList.toggle("active", idx === i);
+      });
+    });
+  });
+
+  var swiper2 = new Swiper(".itemSwiper", {
+    autoplay: {
+      delay: 2000,
+    },
+    loop: true,
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    spaceBetween: 12,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  new Swiper(".pbswiper", {
+    slidesPerView: 4,
+    spaceBetween: 16,
   });
 };
