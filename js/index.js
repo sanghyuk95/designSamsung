@@ -10,7 +10,7 @@ window.onload = function () {
         $header.classList.remove("active");
       }
     },
-    offset: "-10%",
+    offset: "10%",
   });
 
   var swiper = new Swiper(".mainSwiper", {
@@ -73,4 +73,9 @@ window.onload = function () {
     slidesPerView: 4,
     spaceBetween: 16,
   });
+  new Swiper('.storyswiper', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    
+  })
 };
