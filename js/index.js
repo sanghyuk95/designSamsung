@@ -10,7 +10,7 @@ window.onload = function () {
         $header.classList.remove("active");
       }
     },
-    offset: "10%",
+    offset: "-50%",
   });
 
   var swiper = new Swiper(".mainSwiper", {
