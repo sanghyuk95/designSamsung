@@ -56,9 +56,9 @@ window.onload = function () {
   });
 
   var swiper2 = new Swiper(".itemSwiper", {
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
     loop: true,
     slidesPerView: 4,
     slidesPerGroup: 4,
