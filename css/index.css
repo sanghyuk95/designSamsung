@@ -315,6 +315,12 @@ body {
   display: flex;
   gap: 40px;
 }
+.controler-btn li {
+  cursor: pointer;
+}
+.controler-btn li:hover {
+  color:#f9bb00;
+}
 .play {
   width: 10px;
 }

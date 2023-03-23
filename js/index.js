@@ -1,8 +1,11 @@
 window.onload = function () {
+  AOS.init();
+
   const $header = document.querySelector(".header");
+  const $mainBanner = document.querySelector(".mainbanner");
 
   new Waypoint({
-    element: $header,
+    element: $mainBanner,
     handler: (dir) => {
       if (dir === "down") {
         $header.classList.add("active");
@@ -10,12 +13,12 @@ window.onload = function () {
         $header.classList.remove("active");
       }
     },
-    offset: "-50%",
+    offset: "10%",
   });
 
   var swiper = new Swiper(".mainSwiper", {
     autoplay: {
-      delay: 2000,
+      delay: 5000,
     },
     loop: true,
     pagination: {
@@ -56,9 +59,9 @@ window.onload = function () {
   });
 
   var swiper2 = new Swiper(".itemSwiper", {
-    // autoplay: {
-    //   delay: 2000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
     loop: true,
     slidesPerView: 4,
     slidesPerGroup: 4,
@@ -73,9 +76,12 @@ window.onload = function () {
     slidesPerView: 4,
     spaceBetween: 16,
   });
-  new Swiper('.storyswiper', {
+  new Swiper(".storyswiper", {
     slidesPerView: 3,
     spaceBetween: 10,
-    
-  })
+    navigation: {
+      prevEl: ".story-leftbtn",
+      nextEl: ".story-rightbtn",
+    },
+  });
 };
