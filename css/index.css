@@ -131,6 +131,9 @@ body {
   font-weight: 700;
   color: #333333;
 }
+.mob-gnb-list-title-left.active h1 {
+  color:#f9bb00;
+}
 .mob-gnb-list-title-right {
   width: 20px;
   height: 20px;

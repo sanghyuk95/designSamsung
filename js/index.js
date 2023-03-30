@@ -130,4 +130,27 @@ window.onload = function () {
       nextEl: ".story-rightbtn",
     },
   });
+
+  const $mobTitle = document.querySelectorAll(".mob-gnb-list-title");
+  const $mobDetail = document.querySelectorAll(".mob-gnb-list-detail");
+  const $mobTitleColor = document.querySelectorAll(".mob-gnb-list-title-left");
+
+  $mobTitle.forEach((item, idx) => {
+    item.addEventListener("click", () => {
+      $mobDetail.forEach((e, i) => {
+        if (e.classList.contains("active")) {
+          e.classList.remove('active')
+          return
+        }
+        e.classList.toggle("active", i === idx);
+      });
+      $mobTitleColor.forEach((e, i) => {
+        if (e.classList.contains("active")) {
+          e.classList.remove('active')
+          return
+        }
+        e.classList.toggle("active", i === idx);
+      });
+    });
+  });
 };
